@@ -41,6 +41,6 @@ class EmojiPickerFlutterPlugin : FlutterPlugin, MethodCallHandler {
     }
 
     override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
-        channel.setMethodCallHandler(null)
+        if(channel!=null) channel.setMethodCallHandler(null)
     }
 }
